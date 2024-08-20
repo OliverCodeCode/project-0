@@ -1,9 +1,11 @@
 # TASK A: Define a variable 'word' that holds the correct word for the wordle game
-
+word = "panda"
 
 # TASK B: Define a function 'makeAGuess()' that passes in a users guess as a parameter
-
-
+makeAGuess(guess, ){
+  
+}
+guess = input("Make a Guess")
   # TASK C:Define a variable 'hint' that holds an empty string
  
 
