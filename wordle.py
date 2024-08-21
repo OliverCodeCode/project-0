@@ -2,16 +2,24 @@
 word = "panda"
 
 # TASK B: Define a function 'makeAGuess()' that passes in a users guess as a parameter
-makeAGuess(guess, ){
+def makeAGuess(userguess):
+
+
   
-}
-guess = input("Make a Guess")
   # TASK C:Define a variable 'hint' that holds an empty string
- 
+  hint = "" 
 
   # TASK D: Build a loop that loops from 0 to the length of word
-  
-
+  for k in range(word):
+    if guess[k] == word[k]:
+      hint[k] = "g"
+    
+    elif guess[k] in word:
+      hint[k] = "y"
+ 
+    else:
+      hint[k] ="-"
+  return hint
     # TASK E: Check if the current letter of guess matches the current letter of word. If so add the letter "G" to the hint
     
     
