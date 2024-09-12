@@ -1,14 +1,14 @@
 # TASK A: Define a variable 'word' that holds the correct word for the wordle game
-word = "panda"
+word = "leave"
+hint = ""
 
 # TASK B: Define a function 'makeAGuess()' that passes in a users guess as a parameter
-def makeAGuess(guess):
+def makeAGuess(guess, hint):
 
 
   
   # TASK C:Define a variable 'hint' that holds an empty string
-  hint = "" 
-
+  
   # TASK D: Build a loop that loops from 0 to the length of word
   for k in range(len(word)):
     if guess[k] == word[k]:
@@ -29,7 +29,7 @@ def makeAGuess(guess):
     # TASK G: If the previous two conditions are false, add the symbol "-" to the hint
     
   # TASK H: Return hint
-  
+
 
 def playwordle():
   print("Let's play wordle! /n Guess the Wordle in 6 tries. Each guess must be a valid 5-letter word. For each guess, a hint will tell you how many letters you've guessed correctly. A G represents a letter in the word and in the correct spot.. A Y represents a letter in the word but in the wrong spot. A - represents a letter not in the word in any spot. \n Guess below! \n")
@@ -41,14 +41,13 @@ def playwordle():
     # TASK J: Define a variable 'guess'. prompt the user for their 5-letter guess and store it in the variable
     guess = input("Make a guess")
     # TASK K: Define a variable 'hint' and set the return of makeAGuess(guess) to that variable
-    hint = makeAGuess(guess)
+    hint1 = makeAGuess(guess, hint)
     # TASK L: Print hint
-    print(hint)
+    print(hint1)
     # TASK M: Check if hint = "GGGGG". If so the user has won. Print a win message and break the loop
-    if hint == "ggggg":
-      print("You Win")
+    if hint1 == "ggggg":
       break
 
   # TASK N: After the loop has finished, meaning the user has run out of guesses, check if hint != "GGGGG". If so, the user has lost. Print a lose message. 
-  if hint != "ggggg":
+  if hint1 != "ggggg":
     print("You Lose")
